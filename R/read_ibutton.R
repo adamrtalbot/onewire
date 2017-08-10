@@ -9,6 +9,7 @@
 #' Read iButton Data
 #'
 #' Function for reading data from an individual iButton
+#'
 #'  @param file CSV output from an individual iButton
 #'  @param identity Name of iButton 'sample', as either character. Leave as false for no-name.
 #'
@@ -30,6 +31,7 @@ read_ibutton <- function(file, identity = FALSE) {
 #'  Read folder of iButton data
 #'
 #'  Function for reading in a folder of iButton .csv data files, then returning them as a list of data
+#'
 #'  @param folder Folder of iButton data to be read in. All files matching the pattern will be included.
 #'  @param pattern All files matching the REGEX pattern will be included. By default, this is any files ending in '.csv' ("*.csv").
 #'
