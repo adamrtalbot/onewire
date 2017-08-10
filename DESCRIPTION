@@ -1,0 +1,11 @@
+Package: onewire
+Type: Package
+Title: Package for reading in iButton (OneWire) data from .csv files.
+Version: 0.1.0
+Authors: Adam Talbot
+Authors@R: person("Adam", "Talbot", email = "talbot.a.r@gmail.com", role = c("aut, "cre"))
+Maintainer: Adam Talbot <talbot.a.r@gmail.com>
+Description: Package for reading in iButton (OneWire) data from .csv files and parsing to a relevant data frame.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
