@@ -32,15 +32,19 @@ read_ibutton <- function(file, identity = FALSE) {
 #'
 #'  Function for reading in a folder of iButton .csv data files, then returning them as a list of data
 #'
-#'  @param folder Folder of iButton data to be read in. All files matching the pattern will be included.
-#'  @param pattern All files matching the REGEX pattern will be included. By default, this is any files ending in '.csv' ("*.csv").
-#'
+#'  @param file_list Character vector of files to import as iButton data files. Overrides 'folder' and 'pattern'.
+#'  @param folder Folder of iButton data to be read in. All files matching the pattern will be included. Ignored if file list is provided.
+#'  @param pattern All files matching the REGEX pattern will be included. By default, this is any files ending in '.csv' ("*.csv"). Ignored if file list is provided.
 #'  @return List of data frames of iButton data, with file name as the identity for each.
 #'  @export
 
-read_ibutton_folder <- function(folder, pattern = "*.csv") {
+read_ibutton_folder <- function(file_list = FALSE, folder = FALSE, pattern = "*.csv") {
 
+  if(file_list != FALSE){
+    files <- file_list
+      } else {
     files <- list.files(path = folder, full.names = TRUE, pattern = pattern, ignore.case = FALSE)
+      }
 
     data_list <- list()
 

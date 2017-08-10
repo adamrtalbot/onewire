@@ -8,10 +8,11 @@ read_ibutton(file, identity = FALSE)
 }
 \description{
 Function for reading data from an individual iButton
- @param file CSV output from an individual iButton
- @param identity Name of iButton 'sample', as either character. Leave as false for no-name.
 }
 \details{
+@param file CSV output from an individual iButton
+ @param identity Name of iButton 'sample', as either character. Leave as false for no-name.
+
 @return Data frame of iButton data, with time, unit and value. If included, identity will be added as the first vector.
  @export
 }

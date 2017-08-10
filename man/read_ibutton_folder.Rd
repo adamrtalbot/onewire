@@ -4,14 +4,15 @@
 \alias{read_ibutton_folder}
 \title{Read folder of iButton data}
 \usage{
-read_ibutton_folder(folder, pattern = "*.csv")
+read_ibutton_folder(file_list = FALSE, folder = FALSE, pattern = "*.csv")
 }
 \description{
 Function for reading in a folder of iButton .csv data files, then returning them as a list of data
- @param folder Folder of iButton data to be read in. All files matching the pattern will be included.
- @param pattern All files matching the REGEX pattern will be included. By default, this is any files ending in '.csv' ("*.csv").
 }
 \details{
-@return List of data frames of iButton data, with file name as the identity for each.
+@param file_list Character vector of files to import as iButton data files. Overrides 'folder' and 'pattern'.
+ @param folder Folder of iButton data to be read in. All files matching the pattern will be included. Ignored if file list is provided.
+ @param pattern All files matching the REGEX pattern will be included. By default, this is any files ending in '.csv' ("*.csv"). Ignored if file list is provided.
+ @return List of data frames of iButton data, with file name as the identity for each.
  @export
 }
